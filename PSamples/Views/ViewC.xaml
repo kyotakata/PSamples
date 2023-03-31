@@ -1,0 +1,34 @@
+﻿<UserControl x:Class="PSamples.Views.ViewC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             xmlns:prism="http://prismlibrary.com/"             
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid>
+        <StackPanel>
+            <Label Content="View C画面"
+                   FontSize="50"/>
+            <ListBox Height="100"
+                     Width="200"
+                     Margin="10"
+                     ItemsSource="{Binding MyListBox}"/>
+            <ComboBox ItemsSource="{Binding Areas}"
+                      Width="200"
+                      SelectedValuePath="Value"
+                      DisplayMemberPath="DisplayValue"
+                      SelectedItem="{Binding SelectedArea}"
+                      SelectionChanged="ComboBox_SelectionChanged">
+
+                <i:Interaction.Triggers>
+                    <i:EventTrigger EventName="SelectionChanged">
+                        <prism:InvokeCommandAction
+                            Command="{Binding AreaSelectionChanged}"
+                            TriggerParameterPath="AddedItems"
+                            />
+                    </i:EventTrigger>
+                </i:Interaction.Triggers>
+            </ComboBox>
+            <Label Content="{Binding SelectedAreaLabel}"/>
+        </StackPanel>
+    </Grid>
+</UserControl>
