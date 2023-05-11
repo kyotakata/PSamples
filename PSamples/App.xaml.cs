@@ -19,9 +19,10 @@ namespace PSamples
         protected override void RegisterTypes(
             IContainerRegistry containerRegistry)
         {
+            // 画面遷移するViewを登録する
             containerRegistry.RegisterForNavigation<ViewA>();
             containerRegistry.RegisterForNavigation<ViewC>();
-            containerRegistry.RegisterDialog<ViewB, ViewBViewModel>();
+            containerRegistry.RegisterDialog<ViewB, ViewBViewModel>();// ダイアログの場合
 
             containerRegistry.RegisterSingleton<MainWindowViewModel>();
         }

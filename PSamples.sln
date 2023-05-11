@@ -1,11 +1,15 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.30002.166
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33213.308
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PSamples", "PSamples\PSamples.csproj", "{2C7C5E88-C9AB-4D3A-B50D-57D864A84E76}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UnitTestProject1", "UnitTestProject1\UnitTestProject1.csproj", "{F931ECA9-CDC6-43F8-85F9-CEC559302089}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DelegateCommandSample", "DelegateCommandSample\DelegateCommandSample.csproj", "{FA3A4373-C801-4BEB-9B4A-F130391A6ECD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BooleanToVisibilityConverter", "BooleanToVisibilityConverter\BooleanToVisibilityConverter.csproj", "{0A4CA150-F966-417F-9C31-93EF942CB90E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +25,14 @@ Global
 		{F931ECA9-CDC6-43F8-85F9-CEC559302089}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{F931ECA9-CDC6-43F8-85F9-CEC559302089}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{F931ECA9-CDC6-43F8-85F9-CEC559302089}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FA3A4373-C801-4BEB-9B4A-F130391A6ECD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FA3A4373-C801-4BEB-9B4A-F130391A6ECD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FA3A4373-C801-4BEB-9B4A-F130391A6ECD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FA3A4373-C801-4BEB-9B4A-F130391A6ECD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0A4CA150-F966-417F-9C31-93EF942CB90E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0A4CA150-F966-417F-9C31-93EF942CB90E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0A4CA150-F966-417F-9C31-93EF942CB90E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0A4CA150-F966-417F-9C31-93EF942CB90E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
