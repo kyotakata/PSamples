@@ -3,6 +3,7 @@ using Prism.Mvvm;
 using Prism.Regions;
 using Prism.Services.Dialogs;
 using PSamples.Views;
+using System.Windows;
 
 namespace PSamples.ViewModels
 {
@@ -17,7 +18,9 @@ namespace PSamples.ViewModels
         /// PrismのDialogServiceを受け取る用のPrivate変数
         /// </summary>
         private IDialogService _dialogService;
-        
+
+
+        #region 画面用プロパティ
         private string _title = "PSamples";
         public string Title
         {
@@ -26,11 +29,49 @@ namespace PSamples.ViewModels
         }
 
         private bool _buttonEnabled = false;
+        /// <summary>
+        /// ボタン押下可否プロパティ
+        /// </summary>
         public bool ButtonEnabled
         {
             get { return _buttonEnabled; }
             set { SetProperty(ref _buttonEnabled, value); }
         }
+
+        private bool _pButtonEnabled = false;
+        /// <summary>
+        /// Pボタン押下可否プロパティ
+        /// </summary>
+        public bool PButtonEnabled
+        {
+            get { return _pButtonEnabled; }
+            set { SetProperty(ref _pButtonEnabled, value); }
+        }
+
+        private bool _visibility = false;
+        /// <summary>
+        /// VVVボタン表示非表示切り替えプロパティ
+        /// BooleanVisibilityConverterによりboolからVisibilityに変換される
+        /// </summary>
+        public bool Visibility
+        {
+            get { return _visibility; }
+            set { SetProperty(ref _visibility, value); }
+        }
+
+        private string _systemDateLabel
+    = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
+
+        /// <summary>
+        /// システム日時
+        /// </summary>
+        public string SystemDateLabel
+        {
+            get { return _systemDateLabel; }
+            set { SetProperty(ref _systemDateLabel, value); }
+        }
+
+        #endregion 画面用プロパティ
 
         /// <summary>
         /// コンストラクタ
@@ -56,18 +97,11 @@ namespace PSamples.ViewModels
                 ShowViewCButtonExecute);
         }
 
-        private string _systemDateLabel 
-            = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
-        
-        /// <summary>
-        /// システム日時
-        /// </summary>
-        public string SystemDateLabel
-        {
-            get { return _systemDateLabel; }
-            set { SetProperty(ref _systemDateLabel, value); }
-        }
+        #region コマンド
 
+        /// <summary>
+        /// システム日時更新ボタン
+        /// </summary>
         public DelegateCommand SystemDateUpdateButton { get; }
 
         /// <summary>
@@ -85,12 +119,23 @@ namespace PSamples.ViewModels
         /// </summary>
         public DelegateCommand ShowViewBButton { get; }
 
-
+        /// <summary>
+        /// ViewC画面遷移ボタン
+        /// </summary>
         public DelegateCommand ShowViewCButton { get; }
 
+        #endregion コマンド
+
+        #region コマンド用Privateメソッド
+
+        /// <summary>
+        /// システム日時更新メソッド
+        /// </summary>
         private void SystemDateUpdateButtonExecute()
         {
             ButtonEnabled = true;
+            PButtonEnabled = true;
+            Visibility = true;
             SystemDateLabel 
                 = System.DateTime.Now.ToString("yyyy/MM/dd HH:mm:ss");
         }
@@ -145,5 +190,7 @@ namespace PSamples.ViewModels
             _regionManager.RequestNavigate(
                "ContentRegion", nameof(ViewC));
         }
+
+        #endregion コマンド用Privateメソッド
     }
 }

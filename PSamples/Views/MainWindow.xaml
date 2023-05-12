@@ -19,14 +19,15 @@
             <Button Content="Show view A"
                     Command="{Binding ShowViewAButton}"/>
             <Button Content="Show view A パラメータあり"
-                    Command="{Binding ShowViewPButton}"/>
+                    Command="{Binding ShowViewPButton}" IsEnabled="{Binding PButtonEnabled}"/>
             <Button Content="Show view B"
                     Command="{Binding ShowViewBButton}"/>
             <Button Content="Show view C: ListBoxSample ComboBoxSample"
                     Command="{Binding ShowViewCButton}"/>
             <Button Content="VVVVVVV"
-                    Visibility="{Binding ButtonEnabled,
+                    Visibility="{Binding Visibility,
                 Converter={StaticResource BoolVisibilityConverter}}"/>
+            
             <ContentControl prism:RegionManager.RegionName="ContentRegion" />
         </StackPanel>
     </Grid>

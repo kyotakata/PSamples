@@ -25,7 +25,7 @@ namespace PSamples.Views
         /// MVVMの思想としては基本的にViewModelにロジックを集めたいので、ViewModelに書く。
         /// </summary>
         /// <param name="sender"></param>
-        /// <param name="e"></param>
+        /// <param name="e">イベント引数</param>
         private void ComboBox_SelectionChanged(
             object sender, SelectionChangedEventArgs e)
         {

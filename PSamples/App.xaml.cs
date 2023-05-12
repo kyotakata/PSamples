@@ -24,7 +24,9 @@ namespace PSamples
             containerRegistry.RegisterForNavigation<ViewC>();
             containerRegistry.RegisterDialog<ViewB, ViewBViewModel>();// ダイアログの場合
 
-            containerRegistry.RegisterSingleton<MainWindowViewModel>();
+            // ここに登録しておくことでコンストラクタに引数を指定した時、自動的にDIしてくれる
+            containerRegistry.RegisterSingleton<MainWindowViewModel>();// メイン画面はアプリケーションでただ１つしかないため、シングルトン設定をしておく。
+                                                                       // メイン画面から画面遷移したとしてもメイン画面が切り替わるわけではなく、メイン画面上にUserControlをおいているイメージなので、メイン画面は１つしかない。
         }
     }
 }

@@ -22,6 +22,7 @@
                 <!--namespaceにiを宣言して以下のInteraction.Triggersを書くことでイベントハンドラをViewModelにBindingできる-->
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
+                        <!--イベント引数を参照したい。イベント引数eのAddedItemsプロパティをTriggerParameterPathに指定する-->
                         <prism:InvokeCommandAction
                             Command="{Binding AreaSelectionChanged}"
                             TriggerParameterPath="AddedItems"/>

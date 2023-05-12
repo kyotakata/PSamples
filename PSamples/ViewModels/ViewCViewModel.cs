@@ -13,12 +13,13 @@ namespace PSamples.ViewModels
                                                                          // 但し、IConfirmNavigationRequestでは画面を離れる直前に通知されるメソッド(ConfirmNavigationRequest)がある。画面を離れてよいか未保存のデータがある時等の確認用の処理を追加したりする
     {
         private IMessageService _messageService;
+
         private MainWindowViewModel _mainWindowViewModel;
 
         /// <summary>
         /// コンストラクタ
         /// </summary>
-        /// <param name="mainWindowViewModel"></param>
+        /// <param name="mainWindowViewModel">App.xaml.csに登録したことで自動的にMainWindowViewModelをDIしてくれる</param>
         public ViewCViewModel(MainWindowViewModel mainWindowViewModel) :
             this(new MessageService(), mainWindowViewModel)
         {
@@ -161,6 +162,7 @@ namespace PSamples.ViewModels
                 SelectedArea.DisplayValue;
 
             _mainWindowViewModel.Title = SelectedAreaLabel;
+            _mainWindowViewModel.PButtonEnabled = false;
         }
     }
 }
