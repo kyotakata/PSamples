@@ -75,6 +75,7 @@ namespace PSamples.ViewModels
         }
 
         private ComboBoxViewModel _selectedArea;
+
         /// <summary>
         /// ComboBoxへBindingされた選択された値
         /// </summary>
@@ -85,11 +86,16 @@ namespace PSamples.ViewModels
         }
 
         /// <summary>
-        /// 
+        /// ComboBoxのInteraction.TriggersにBindingするDelegateCommand
         /// </summary>
         public DelegateCommand<object[]> AreaSelectionChanged { get; }
 
+
         private string _selectedAreaLabel;
+
+        /// <summary>
+        /// LabelのContentプロパティにBindingするプロパティ。ComboBoxで選択されているデータをLabelに表示する。
+        /// </summary>
         public string SelectedAreaLabel
         {
             get { return _selectedAreaLabel; }
@@ -145,6 +151,10 @@ namespace PSamples.ViewModels
         {
         }
 
+        /// <summary>
+        /// ComboBoxの値が変化したときに呼ばれるメソッド
+        /// </summary>
+        /// <param name="items"></param>
         private void AreaSelectionChangedExecute(object[] items)
         {
             SelectedAreaLabel = SelectedArea.Value + " : " +
