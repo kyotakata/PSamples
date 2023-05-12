@@ -16,11 +16,20 @@ namespace PSamples.ViewModels
         private IDialogService _dialogService;
         private IMessageService _messageService;
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="dialogService">Prismが自動でDialogServiceを依存性注入してくれる</param>
         public ViewAViewModel(IDialogService dialogService)
             : this(dialogService, new MessageService())
         {
         }
 
+        /// <summary>
+        /// コンストラクタ
+        /// </summary>
+        /// <param name="dialogService"></param>
+        /// <param name="messageService">カスタムクラスMessageServiceを受ける</param>
         public ViewAViewModel(
             IDialogService dialogService,
             IMessageService messageService)
@@ -38,7 +47,14 @@ namespace PSamples.ViewModels
             set { SetProperty(ref _myLabel, value); }
         }
 
+        /// <summary>
+        /// メッセージボックス表示ボタン
+        /// </summary>
         public DelegateCommand OKButton { get; }
+
+        /// <summary>
+        /// メッセージボックス表示ボタン②の方法
+        /// </summary>
         public DelegateCommand OKButton2 { get; }
 
         /// <summary>
@@ -75,14 +91,22 @@ namespace PSamples.ViewModels
         {
         }
 
+        /// <summary>
+        /// メッセージボックス表示メソッド(Prismポップアップ画面を使用した方法。標準MessageBoxを使用しない方法)
+        /// </summary>
         private void OKButtonExecute()
         {
             // MessageBox.Show("Saveします");
+
+            // ViewBのポップアップ画面を使って標準MessageBoxの代わりとするやり方
             var p = new DialogParameters();
             p.Add(nameof(ViewBViewModel.ViewBTextBox), "Saveします");
             _dialogService.ShowDialog(nameof(ViewB), p, null);
         }
 
+        /// <summary>
+        /// メッセージボックス表示メソッド(カスタムクラスMessageServiceを使用した方法。標準MessageBoxを使用しない方法)
+        /// </summary>
         private void OKButton2Execute()
         {
             // MessageBox.Show("Saveします");

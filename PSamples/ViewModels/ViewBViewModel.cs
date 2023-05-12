@@ -14,7 +14,7 @@ namespace PSamples.ViewModels
             OKButton = new DelegateCommand(OKButtonExecute);
         }
 
-        public string Title => throw new NotImplementedException();
+        public string Title => "ViewB";
 
         private string _viewBTextBox = "XXX";
         /// <summary>
@@ -38,7 +38,7 @@ namespace PSamples.ViewModels
         public DelegateCommand OKButton { get; }
 
         /// <summary>
-        /// 画面閉じれるかどうか
+        /// ポップアップ画面閉じれるかどうか
         /// IDialogAwareの実装
         /// </summary>
         /// <returns>tureの時は閉じれる。</returns>
@@ -48,7 +48,7 @@ namespace PSamples.ViewModels
         }
 
         /// <summary>
-        /// 画面が閉じる時に通過するメソッド。終了処理がある場合はここに書く。
+        /// ポップアップ画面が閉じる時に通過するメソッド。終了処理がある場合はここに書く。
         /// IDialogAwareの実装
         /// </summary>
         public void OnDialogClosed()
@@ -56,7 +56,7 @@ namespace PSamples.ViewModels
         }
 
         /// <summary>
-        /// 画面が開くときに通過するメソッド
+        /// ポップアップ画面が開くときに通過するメソッド
         /// IDialogAwareの実装
         /// </summary>
         /// <param name="parameters">ここでパラメータを受ける</param>

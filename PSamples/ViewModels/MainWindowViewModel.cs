@@ -81,9 +81,11 @@ namespace PSamples.ViewModels
         public DelegateCommand ShowViewPButton { get; }
 
         /// <summary>
-        /// ViewB画面遷移ボタン
+        /// ViewBポップアップ画面遷移ボタン
         /// </summary>
         public DelegateCommand ShowViewBButton { get; }
+
+
         public DelegateCommand ShowViewCButton { get; }
 
         private void SystemDateUpdateButtonExecute()
@@ -115,7 +117,7 @@ namespace PSamples.ViewModels
     
 
         /// <summary>
-        /// ViewB画面遷移メソッド
+        /// ViewBポップアップ画面遷移メソッド
         /// </summary>
         private void ShowViewBButtonExecute()
         {
@@ -125,7 +127,7 @@ namespace PSamples.ViewModels
         }
 
         /// <summary>
-        /// ポップアップが閉じられたときに通過するメソッド(IDialogResult型の引数のActionにする)
+        /// ViewBポップアップ画面が閉じられたときに通過するメソッド(IDialogResult型の引数のActionにする)
         /// </summary>
         /// <param name="dialogResult">ここでViewBModelのOKButtonExecuteで定義したnew DialogResult(ButtonResult.OK, p)を受け取れる</param>
         private void ViewBClose(IDialogResult dialogResult)
@@ -136,6 +138,7 @@ namespace PSamples.ViewModels
                     GetValue<string>(nameof(ViewBViewModel.ViewBTextBox));
             }
         }
+
 
         private void ShowViewCButtonExecute()
         {

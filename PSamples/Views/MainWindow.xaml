@@ -22,7 +22,7 @@
                     Command="{Binding ShowViewPButton}"/>
             <Button Content="Show view B"
                     Command="{Binding ShowViewBButton}"/>
-            <Button Content="Show view C: ListBox ComboBox"
+            <Button Content="Show view C: ListBoxSample ComboBoxSample"
                     Command="{Binding ShowViewCButton}"/>
             <Button Content="VVVVVVV"
                     Visibility="{Binding ButtonEnabled,

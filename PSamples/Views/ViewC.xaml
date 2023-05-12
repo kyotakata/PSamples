@@ -12,13 +12,14 @@
                      Width="200"
                      Margin="10"
                      ItemsSource="{Binding MyListBox}"/>
-            <ComboBox ItemsSource="{Binding Areas}"
+            <ComboBox x:Name="ViewCConboBox"
+                      ItemsSource="{Binding Areas}"
                       Width="200"
                       SelectedValuePath="Value"
                       DisplayMemberPath="DisplayValue"
                       SelectedItem="{Binding SelectedArea}"
                       SelectionChanged="ComboBox_SelectionChanged">
-
+                <!--namespaceにiを宣言して以下のInteraction.Triggersを書くことでイベントハンドラをViewModelにBindingできる-->
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="SelectionChanged">
                         <prism:InvokeCommandAction
@@ -28,6 +29,25 @@
                     </i:EventTrigger>
                 </i:Interaction.Triggers>
             </ComboBox>
+            
+            <!--以下ConboBoxのModeをOneWayにすることで画面からは表示を変えてもViewModelの持っている内部の値(SelectedArea)は変わらない-->
+            <!--<ComboBox x:Name="ViewCConboBox"
+                      ItemsSource="{Binding Areas}"
+                      Width="200"
+                      SelectedValuePath="Value"
+                      DisplayMemberPath="DisplayValue"
+                      SelectedItem="{Binding SelectedArea, Mode=OneWay}"
+                      SelectionChanged="ComboBox_SelectionChanged">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="SelectionChanged">
+                    <prism:InvokeCommandAction
+                            Command="{Binding AreaSelectionChanged}"
+                            TriggerParameterPath="AddedItems"
+                            />
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            </ComboBox>-->
+
             <Label Content="{Binding SelectedAreaLabel}"/>
         </StackPanel>
     </Grid>
