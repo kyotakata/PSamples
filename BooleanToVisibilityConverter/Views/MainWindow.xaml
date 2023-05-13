@@ -5,6 +5,21 @@
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525" >
     <Grid>
+        <StackPanel>
+            <StackPanel.Resources>
+                <BooleanToVisibilityConverter x:Key="BoolToVisibility"/>
+            </StackPanel.Resources>
+            <CheckBox x:Name="CheckBox"
+                      Content="設定大項目"/>
+            <StackPanel Visibility="{Binding IsChecked, 
+                ElementName=CheckBox,
+                Converter={StaticResource BoolToVisibility}}"
+                Margin = "20,0,0,0">
+                <RadioButton Content="設定小項目1"/>
+                <RadioButton Content="設定小項目2"/>
+                <RadioButton Content="設定小項目3"/>
+            </StackPanel>
+        </StackPanel>
         <ContentControl prism:RegionManager.RegionName="ContentRegion" />
     </Grid>
 </Window>
