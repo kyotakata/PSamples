@@ -168,6 +168,8 @@ namespace PSamples.ViewModels
         {
             var p = new DialogParameters();
             p.Add(nameof(ViewBViewModel.ViewBTextBox), SystemDateLabel);// 第一引数のキーは画面遷移先のプロパティの名前にしておくのが良い。
+            p.Add(nameof(ViewBViewModel.Width), 500);// 第一引数のキーは画面遷移先のプロパティの名前にしておくのが良い。
+            p.Add(nameof(ViewBViewModel.Height), 500);// 第一引数のキーは画面遷移先のプロパティの名前にしておくのが良い。
             _dialogService.ShowDialog(nameof(ViewB), p, ViewBClose);// 第一引数にはViewの名前、第二引数にはパラメータ、第三引数には画面が閉じられたときのActionを指定する。尚、第二引数と第三引数はnullでもポップアップ表示可能。
         }
 

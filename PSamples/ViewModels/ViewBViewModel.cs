@@ -26,6 +26,27 @@ namespace PSamples.ViewModels
             set { SetProperty(ref _viewBTextBox, value); }
         }
 
+
+        private int _width = 100;
+        /// <summary>
+        /// 画面横幅
+        /// </summary>
+        public int Width
+        {
+            get { return _width; }
+            set { SetProperty(ref _width, value); }
+        }
+
+        private int _height = 100;
+        /// <summary>
+        /// 画面縦幅
+        /// </summary>
+        public int Height
+        {
+            get { return _height; }
+            set { SetProperty(ref _height, value); }
+        }
+
         /// <summary>
         /// RequestCloseというアクション
         /// IDialogAwareの実装
@@ -64,6 +85,10 @@ namespace PSamples.ViewModels
         {
             ViewBTextBox =
                  parameters.GetValue<string>(nameof(ViewBTextBox));
+            Width =
+                 parameters.GetValue<int>(nameof(Width));
+            Height =
+                 parameters.GetValue<int>(nameof(Height));
         }
 
         /// <summary>
