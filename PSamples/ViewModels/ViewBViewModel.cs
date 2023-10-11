@@ -47,6 +47,16 @@ namespace PSamples.ViewModels
             set { SetProperty(ref _height, value); }
         }
 
+        private string _resizeMode = "NoResize";
+        /// <summary>
+        /// リサイズモード(CanResize,NoResize,CanMinimize,CanResizeWithGrip指定可能)
+        /// </summary>
+        public string ResizeMode
+        {
+            get { return _resizeMode; }
+            set { SetProperty(ref _resizeMode, value); }
+        }
+
         /// <summary>
         /// RequestCloseというアクション
         /// IDialogAwareの実装
@@ -89,6 +99,12 @@ namespace PSamples.ViewModels
                  parameters.GetValue<int>(nameof(Width));
             Height =
                  parameters.GetValue<int>(nameof(Height));
+            var mode =
+                 parameters.GetValue<string>(nameof(ResizeMode));
+            if (mode != null)// parametersにResizeModeが追加されていない場合、nullとなってしまうのを防ぐ。nullの時はフィールド宣言時に初期化された値となる。
+            {
+                ResizeMode= mode;
+            }
         }
 
         /// <summary>
