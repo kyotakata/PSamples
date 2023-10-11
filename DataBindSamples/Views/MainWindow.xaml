@@ -1,0 +1,24 @@
+﻿<Window x:Class="DataBindSample_01.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="False"
+        Title="{Binding Title}" Height="350" Width="525" >
+    <Grid>
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <DockPanel Margin="4">
+            <TextBlock Text="{Binding Name}"
+                   DockPanel.Dock="Top"/>
+            <ListBox ItemsSource="{Binding Items}">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal">
+                            <TextBlock Text="{Binding Id}"/>
+                            <TextBox Text="{Binding ItemName}" Margin="8 0 0 0"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </DockPanel>
+    </Grid>
+</Window>

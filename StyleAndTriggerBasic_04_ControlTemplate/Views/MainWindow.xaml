@@ -1,0 +1,32 @@
+﻿<Window x:Class="StyleAndTriggerBasic_04_ControlTemplate.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="350" Width="525" >
+    <Window.Resources>
+        <Style x:Key="EllipseButton" TargetType="Button">
+            <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="Button">
+                        <Grid>
+                            <Ellipse Fill="{TemplateBinding Background}"/>
+                            <ContentPresenter
+                                Margin="{TemplateBinding Padding}"
+                                RecognizesAccessKey="True"
+                                HorizontalAlignment="Center"
+                                VerticalAlignment="Center"/>
+                        </Grid>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <StackPanel>
+            <Button Style="{StaticResource EllipseButton}" Content="ボタン1" Background="Gray" Click="Button_Click"/>
+            <Button Style="{StaticResource EllipseButton}" Content="ボタン2" Background="LightGray" Padding="2"/>
+        </StackPanel>
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+    </Grid>
+</Window>
