@@ -19,17 +19,21 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBindSample_02_ItemSourc
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DataBindSample_03_UserControl", "DataBindSample_03_UserControl\DataBindSample_03_UserControl.csproj", "{CAECAE4E-CFDA-4AD5-B6B4-D6109167A06B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ItemsControlBasic", "ItemsControlBasic\ItemsControlBasic.csproj", "{490562D0-2524-43B3-841E-4421EB730A7A}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ItemsControlBasic", "ItemsControlBasic\ItemsControlBasic.csproj", "{490562D0-2524-43B3-841E-4421EB730A7A}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleAndTriggerBasic_01", "StyleAndTriggerBasic\StyleAndTriggerBasic_01.csproj", "{C93A43FC-DEB6-4B28-B924-E0685793D896}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleAndTriggerBasic_01", "StyleAndTriggerBasic\StyleAndTriggerBasic_01.csproj", "{C93A43FC-DEB6-4B28-B924-E0685793D896}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleAndTriggerBasic_02", "StyleAndTriggerBasic_02\StyleAndTriggerBasic_02.csproj", "{098287B1-D940-4454-B03F-C8044E754D17}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleAndTriggerBasic_02", "StyleAndTriggerBasic_02\StyleAndTriggerBasic_02.csproj", "{098287B1-D940-4454-B03F-C8044E754D17}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleAndTriggerBasic_03", "StyleAndTriggerBasic_03\StyleAndTriggerBasic_03.csproj", "{740AA3C7-CAFA-47BC-B631-69F2E28C0E88}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleAndTriggerBasic_03", "StyleAndTriggerBasic_03\StyleAndTriggerBasic_03.csproj", "{740AA3C7-CAFA-47BC-B631-69F2E28C0E88}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleAndTriggerBasic_04_ControlTemplate", "StyleAndTriggerBasic_04_ControlTemplate\StyleAndTriggerBasic_04_ControlTemplate.csproj", "{B41E13F5-A1A8-43BD-B6C5-24ED68FF977C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleAndTriggerBasic_04_ControlTemplate", "StyleAndTriggerBasic_04_ControlTemplate\StyleAndTriggerBasic_04_ControlTemplate.csproj", "{B41E13F5-A1A8-43BD-B6C5-24ED68FF977C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StyleAndTriggerBasic_05_DataTemplate", "StyleAndTriggerBasic_05_DataTemplate\StyleAndTriggerBasic_05_DataTemplate.csproj", "{702C70AD-13EF-4D48-BBF4-E5CEAA5CC16D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "StyleAndTriggerBasic_05_DataTemplate", "StyleAndTriggerBasic_05_DataTemplate\StyleAndTriggerBasic_05_DataTemplate.csproj", "{702C70AD-13EF-4D48-BBF4-E5CEAA5CC16D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TabSample", "TabSample\TabSample.csproj", "{AE834050-5255-44F9-A8FE-D7EA2758B4F7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TabSample2", "TabSample2\TabSample2.csproj", "{9828C587-219B-4D17-A896-801A74570D3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -93,6 +97,14 @@ Global
 		{702C70AD-13EF-4D48-BBF4-E5CEAA5CC16D}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{702C70AD-13EF-4D48-BBF4-E5CEAA5CC16D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{702C70AD-13EF-4D48-BBF4-E5CEAA5CC16D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AE834050-5255-44F9-A8FE-D7EA2758B4F7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AE834050-5255-44F9-A8FE-D7EA2758B4F7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AE834050-5255-44F9-A8FE-D7EA2758B4F7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AE834050-5255-44F9-A8FE-D7EA2758B4F7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9828C587-219B-4D17-A896-801A74570D3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9828C587-219B-4D17-A896-801A74570D3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9828C587-219B-4D17-A896-801A74570D3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9828C587-219B-4D17-A896-801A74570D3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

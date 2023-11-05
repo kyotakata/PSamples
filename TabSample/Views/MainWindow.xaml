@@ -1,0 +1,26 @@
+﻿<Window x:Class="TabSample.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        xmlns:local="clr-namespace:TabSample.Views"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="200" Width="300" >
+    <Grid>
+        <DockPanel>
+            <TabControl>
+                <TabItem DataContext="{Binding Content01ViewModel}" Header="{Binding CheckBoxComment}">
+                    <local:DockCheckBox/>
+                </TabItem>
+
+                <TabItem DataContext="{Binding Content02ViewModel}" Header="{Binding Caption}">
+                    <CheckBox Content="{Binding Caption}"/>
+                </TabItem>
+
+                <TabItem DataContext="{Binding Content03ViewModel}" Header="{Binding Caption}">
+                    <CheckBox Content="{Binding Caption}"/>
+                </TabItem>
+            </TabControl>
+        </DockPanel>
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+    </Grid>
+</Window>
