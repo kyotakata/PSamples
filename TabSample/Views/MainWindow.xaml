@@ -9,7 +9,7 @@
         <DockPanel>
             <TabControl>
                 <TabItem DataContext="{Binding Content01ViewModel}" Header="{Binding CheckBoxComment}">
-                    <local:DockCheckBox/>
+                    <local:Content01View/>
                 </TabItem>
 
                 <TabItem DataContext="{Binding Content02ViewModel}" Header="{Binding Caption}">

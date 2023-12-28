@@ -16,11 +16,11 @@ using System.Windows.Shapes;
 namespace TabSample.Views
 {
     /// <summary>
-    /// DockCheckBox.xaml の相互作用ロジック
+    /// Content01View.xaml の相互作用ロジック
     /// </summary>
-    public partial class DockCheckBox : UserControl
+    public partial class Content01View : UserControl
     {
-        public DockCheckBox()
+        public Content01View()
         {
             InitializeComponent();
         }
